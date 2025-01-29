@@ -1,0 +1,11 @@
+@if (hero) {
+    <h2>{{hero.name}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div>
+        <label>name:
+            <input type="text" [(ngModel)]="hero.name">
+        </label>
+    </div>
+} @else {
+    <h2>no hay heroe seleccionado</h2>
+}

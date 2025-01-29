@@ -1,0 +1,6 @@
+<h1>Listado de heroes</h1>
+    @for (hero of heroes; track hero.id){
+        <div><span>{{hero.id}}</span>:<span><a routerLink = "/hero/{{hero.id}}">{{hero.name}}</a></span></div>
+    }
+
+

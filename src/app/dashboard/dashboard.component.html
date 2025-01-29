@@ -1,0 +1,7 @@
+
+
+<h1>Top 5 heroes</h1>
+
+@for (hero of heroes; track $index) {
+    <div><span>{{hero.id}}</span>:<span><a routerLink = "/hero/{{hero.id}}">{{hero.name}}</a></span></div>
+}
