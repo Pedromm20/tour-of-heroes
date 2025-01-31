@@ -3,11 +3,12 @@ import { Hero } from '../hero-interface';
 import { FormsModule } from '@angular/forms';
 import { HeroService } from '../hero-service';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-hero-detail',
-  imports: [FormsModule],
+  imports: [FormsModule, HttpClientModule],
   templateUrl: './hero-detail.component.html',
   styleUrl: './hero-detail.component.scss'
 })

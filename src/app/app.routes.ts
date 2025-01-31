@@ -10,7 +10,7 @@ export const routes: Routes = [
         component: HeroesComponent,
     },
     {
-        path: "hero/i:id",
+        path: "hero/:id",
         component: HeroDetailComponent, 
     },
     {

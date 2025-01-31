@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Hero } from './hero-interface';
+import { HttpClient } from '@angular/common/http';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeroService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   private heroes: Hero[] = [
     { id: 1, name: 'Davil Evil' },
@@ -26,8 +28,14 @@ export class HeroService {
   }
 
   public getHeroById(id: number): Hero | undefined {
-    return this.getHeroes().find(hero => hero.id === id);
+    return this.heroes.find(hero => hero.id === id);
   }
   
+  public getHeroFromAPI() {
+    this.http.get("http://localhost:3000/heroes").subscribe(heroes  => {
+      console.log(heroes);
+    });
+
+  }
   
 }
